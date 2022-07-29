@@ -86,7 +86,7 @@
  */
 
 // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
-#define SHOW_BOOTSCREEN
+#define SHOW_BOOTSCREEN // bootscreen
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
 #define SHOW_CUSTOM_BOOTSCREEN
@@ -98,7 +98,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-#define MOTHERBOARD BOARD_WANHAO_ONEPLUS
+#define MOTHERBOARD BOARD_MKS_GEN_L // BOARD_WANHAO_ONEPLUS
 #endif
 
 /**
@@ -815,7 +815,7 @@
 //#define USE_KMIN_PLUG
 #define USE_XMAX_PLUG
 //#define USE_YMAX_PLUG
-//#define USE_ZMAX_PLUG
+//#define USE_ZMAX_PLUG //zmax
 //#define USE_IMAX_PLUG
 //#define USE_JMAX_PLUG
 //#define USE_KMAX_PLUG
@@ -1383,7 +1383,7 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true
 #define INVERT_Y_DIR false
-#define INVERT_Z_DIR false
+#define INVERT_Z_DIR true // false
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
@@ -1421,7 +1421,7 @@
 // :[-1,1]
 #define X_HOME_DIR 1
 #define Y_HOME_DIR -1
-#define Z_HOME_DIR -1
+#define Z_HOME_DIR -1 // z
 //#define I_HOME_DIR -1
 //#define J_HOME_DIR -1
 //#define K_HOME_DIR -1
@@ -1429,16 +1429,16 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 125 // originally 125
-#define Y_BED_SIZE 230 // originally 140
+#define X_BED_SIZE 110 // originally 125, 165 (50)
+#define Y_BED_SIZE 120 // originally 140, 240 (50)
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define X_MIN_POS 0 // 0
+#define Y_MIN_POS 0 // 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 100
+#define Z_MAX_POS 110
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -1770,6 +1770,8 @@
  *  |  1       2  |   | 1         4 |    | 1         2 |   | 2           |
  *  LF --------- RF   LF --------- RF    LF --------- RF   LF --------- RF
  */
+
+// level corner
 #define LEVEL_CORNERS_LEVELING_ORDER \
   {                                  \
     LF, RF, RB, LB                   \
