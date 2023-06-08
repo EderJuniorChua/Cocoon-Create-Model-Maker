@@ -807,14 +807,14 @@
 // Specify here all the endstop connectors that are connected to any endstop or probe.
 // Almost all printers will be using one per axis. Probes will use one or more of the
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
-//#define USE_XMIN_PLUG
-#define USE_YMIN_PLUG
+#define USE_XMIN_PLUG
+//#define USE_YMIN_PLUG //ok
 #define USE_ZMIN_PLUG
 //#define USE_IMIN_PLUG
 //#define USE_JMIN_PLUG
 //#define USE_KMIN_PLUG
-#define USE_XMAX_PLUG
-//#define USE_YMAX_PLUG
+//#define USE_XMAX_PLUG //ok
+#define USE_YMAX_PLUG 
 //#define USE_ZMAX_PLUG //zmax
 //#define USE_IMAX_PLUG
 //#define USE_JMAX_PLUG
@@ -1419,8 +1419,8 @@
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
-#define X_HOME_DIR 1
-#define Y_HOME_DIR -1
+#define X_HOME_DIR -1  //1
+#define Y_HOME_DIR 1 //-1
 #define Z_HOME_DIR -1 // z
 //#define I_HOME_DIR -1
 //#define J_HOME_DIR -1
@@ -1429,8 +1429,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 110 // originally 125, 165 (50)
-#define Y_BED_SIZE 120 // originally 140, 240 (50)
+#define X_BED_SIZE 50// originally 110, 125, 165 (50)
+#define Y_BED_SIZE 50 // originally 120, 140, 240 (50)
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0 // 0
